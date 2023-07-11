@@ -1,23 +1,29 @@
--- Pull in the wezterm API
 local wezterm = require 'wezterm'
+local appearence = require 'appearence'
 
--- This table will hold the configuration.
 local config = {}
 
--- In newer versions of wezterm, use the config_builder which will
--- help provide clearer error messages
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
-config.text_background_opacity = 0.8
+config.text_background_opacity = 0.6
+config.window_background_opacity = 0.7
+config.macos_window_background_blur = 20
+
+font_size = 12
 
 
--- This is where you actually apply your config choices
+max_fps = 120
+animation_fps = 120
 
--- For example, changing the color scheme:
+config.window_padding = {
+  left = 2,
+  right = 2,
+  top = 0,
+  bottom = 0,
+}
+
 config.color_scheme = 'Catppuccin Frappe'
---config.font = wezterm.font 'JetBrains Mono'
--- You can specify some parameters to influence the font selection;
 config.font = wezterm.font_with_fallback {
   {
     family = 'JetBrains Mono',
@@ -28,14 +34,12 @@ config.font = wezterm.font_with_fallback {
   'Noto Color Emoji',
 }
 
--- for example, this selects a Bold, Italic font variant.
 
 config.inactive_pane_hsb = {
   saturation = 0.9,
   brightness = 0.8,
 }
-  -- The overall background color of the tab bar when
--- and finally, return the configuration to wezterm
+
 return config
 
 
