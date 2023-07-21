@@ -1,6 +1,5 @@
 local wezterm = require 'wezterm'
 local appearence = require 'appearence'
-
 local config = {}
 
 if wezterm.config_builder then
@@ -10,11 +9,11 @@ config.text_background_opacity = 0.6
 config.window_background_opacity = 0.7
 config.macos_window_background_blur = 20
 
-font_size = 12
+config.font_size = 14
 
+config.max_fps = 120
 
-max_fps = 120
-animation_fps = 120
+config.animation_fps = 120
 
 config.window_padding = {
   left = 2,
@@ -23,17 +22,27 @@ config.window_padding = {
   bottom = 0,
 }
 
-config.color_scheme = 'Catppuccin Frappe'
-config.font = wezterm.font_with_fallback {
-  {
-    family = 'JetBrains Mono',
-    weight = 'Medium',
-    harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
-  },
-  { family = 'Terminus', weight = 'Bold' },
-  'Noto Color Emoji',
-}
+local function font_with_fallback(name, params)
+    local names = {name, "Apple Color Emoji", "azuki_font" }
+    return wezterm.font_with_fallback(names, params)
+end
 
+config.color_scheme = 'Catppuccin Frappe'
+-- config.font = wezterm.font_with_fallback {
+  -- {
+    -- family = 'FiraCode Nerd Font',
+    -- weight = 'Medium',
+    -- harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
+  -- },
+  -- { family = 'Terminus', weight = 'Bold' },
+  -- 'Noto Color Emoji',
+-- }
+--config.font = wezterm.font_with_fallback{
+    --family = "FiraCode Nerd Font",
+    --weight = "Medium",
+    --harfbuzz_features = {"calt=0", "clig=0", "liga=0"},
+--}
+config.font = font_with_fallback("FiraCode Nerd Font", {weight="Medium"})
 
 config.inactive_pane_hsb = {
   saturation = 0.9,
