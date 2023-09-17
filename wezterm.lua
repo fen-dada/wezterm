@@ -9,8 +9,9 @@ config.text_background_opacity = 0.6
 config.window_background_opacity = 0.7
 config.macos_window_background_blur = 20
 
-config.font_size = 14
+config.window_decorations = "RESIZE"
 
+config.enable_tab_bar = false
 config.max_fps = 120
 
 config.animation_fps = 120
@@ -21,6 +22,7 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
+config.font_size = 14
 
 local function font_with_fallback(name, params)
     local names = {name, "Apple Color Emoji", "azuki_font" }
