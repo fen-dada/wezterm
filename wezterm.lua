@@ -9,6 +9,9 @@ config.text_background_opacity = 0.6
 config.window_background_opacity = 0.7
 config.macos_window_background_blur = 20
 
+config.initial_cols = 150
+config.initial_rows = 50
+
 config.window_decorations = "RESIZE"
 
 config.enable_tab_bar = false
