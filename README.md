@@ -50,7 +50,7 @@ Follow these steps to install and set up this configuration.
 
 3.  **Install Starship:**
     ```shell
-    curl -sS [https://starship.rs/install.sh](https://starship.rs/install.sh) | sh
+    curl -sS https://starship.rs/install.sh | sh
     ```
 
 4.  **Clone this repository:**
