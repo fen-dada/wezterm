@@ -55,11 +55,12 @@ Follow these steps to install and set up this configuration.
 
 4.  **Clone this repository:**
     ```shell
-    git clone [https://github.com/fen-dada/wezterm.git](https://github.com/fen-dada/weztern.git) ~/.config
+    git clone https://github.com/fen-dada/wezterm.git ~/.config
 
     # If you prefer my Starship config, then do
-    git clone [https://github.com/fen-dada/Starship.git](https://github.com/fen-dada/Starship.git) ~/.config
+    git clone https://github.com/fen-dada/Starship.git ~/.config
     ```
+    [My Starship configuration]()
 
 5.  **Apply a new configuration:**
     Restart your wezterm terminal for all changes to take effect.
