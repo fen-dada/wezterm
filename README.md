@@ -58,9 +58,10 @@ Follow these steps to install and set up this configuration.
     git clone https://github.com/fen-dada/wezterm.git ~/.config
 
     # If you prefer my Starship config, then do
-    git clone https://github.com/fen-dada/Starship.git ~/.config
+    # at ~/.config/wezterm/
+    mv starship.toml ~/.config
     ```
-    [My Starship configuration]()
+    [My Starship configuration](./starship.toml)
 
 5.  **Apply a new configuration:**
     Restart your wezterm terminal for all changes to take effect.
