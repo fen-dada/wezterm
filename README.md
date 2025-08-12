@@ -62,6 +62,11 @@ Follow these steps to install and set up this configuration.
     mv starship.toml ~/.config
     ```
     [My Starship configuration](./starship.toml)
+    *PS*: If you want the same file icons, install [eza](https://eza.rocks/),
+    then add this in your .zshrc:
+    ```zsh
+    alias ls="eza --icons"
+    ```
 
 5.  **Apply a new configuration:**
     Restart your wezterm terminal for all changes to take effect.
