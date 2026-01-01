@@ -9,6 +9,9 @@ config.text_background_opacity = 0.6
 config.window_background_opacity = 0.7
 config.macos_window_background_blur = 20
 
+config.use_fancy_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = true
+
 
 config.font = wezterm.font_with_fallback({
   "FiraCode Nerd Font",
@@ -18,6 +21,12 @@ config.font = wezterm.font_with_fallback({
 
 config.initial_cols = 150
 config.initial_rows = 50
+
+-- 让窗口可以是任意像素尺寸（别强行吸附到 cell 的整数倍）
+config.use_resize_increments = false
+
+-- 用 tiling WM 时建议关掉“改字体就改窗口像素尺寸”的行为
+config.adjust_window_size_when_changing_font_size = false
 
 config.window_decorations = "RESIZE"
 
