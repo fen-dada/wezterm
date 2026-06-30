@@ -1,6 +1,6 @@
 # ~/.config/starship.toml
 right_format = """$time$battery"""
-command_timeout = 10000
+command_timeout = 1000
 add_newline = true
 
 [container]
@@ -16,8 +16,16 @@ charging_symbol = '⚡️ '
 discharging_symbol = '💀 '
 
 [[battery.display]]
-threshold = 100
+threshold = 20
 style = 'bold red'
+
+[[battery.display]]
+threshold = 50
+style = 'bold yellow'
+
+[[battery.display]]
+threshold = 100
+style = 'bold green'
 
 
 [sudo]
@@ -28,7 +36,7 @@ disabled = false
 [time]
 disabled = false
 format = '🕙[\[ $time \]]($style) '
-time_format = '%T'
+time_format = '%H:%M'
 utc_time_offset = '+8'
 time_range = '00:00:00-24:00:00'
 
@@ -126,4 +134,3 @@ symbol = '🐍 '
 format = 'via [$symbol $version](red bold)'
 symbol = '🦀'
 #symbol = " "
-

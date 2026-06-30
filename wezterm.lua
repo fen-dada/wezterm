@@ -12,7 +12,7 @@ config.macos_window_background_blur = 20
 config.automatically_reload_config = true
 config.audible_bell = 'Disabled'
 config.check_for_updates = false
-config.status_update_interval = 100
+config.status_update_interval = 500
 
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
